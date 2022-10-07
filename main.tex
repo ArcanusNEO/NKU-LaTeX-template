@@ -1,5 +1,4 @@
 % -*- coding: utf-8 -*-
-%-------------------------designed by zcf--------------
 \documentclass[UTF8,a4paper,10pt]{ctexart}
 \usepackage[left=3.17cm, right=3.17cm, top=2.74cm, bottom=2.74cm]{geometry}
 \usepackage{amsmath}
@@ -11,7 +10,7 @@
 \usepackage{booktabs} %表格
 \usepackage{multirow}
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}  %表格强制换行
-%-------------------------字体设置--------------
+%-------------------------字体设置-------------------------
 % \usepackage{times} 
 \usepackage{ctex}
 \setCJKmainfont[ItalicFont=Noto Sans CJK SC Bold, BoldFont=Noto Serif CJK SC Black]{Noto Serif CJK SC}
@@ -25,12 +24,12 @@
 \newcommand{\xiaosi}{\fontsize{12pt}{18pt}\selectfont}            % 小四, 1.5倍行距
 \newcommand{\dawuhao}{\fontsize{11pt}{11pt}\selectfont}       % 大五号, 单倍行距
 \newcommand{\wuhao}{\fontsize{10.5pt}{15.75pt}\selectfont}    % 五号, 单倍行距
-%-------------------------章节名----------------
+%-------------------------章节名-------------------------
 \usepackage{ctexcap} 
 \CTEXsetup[name={,、},number={ \chinese{section}}]{section}
 \CTEXsetup[name={（,）},number={\chinese{subsection}}]{subsection}
 \CTEXsetup[name={,.},number={\arabic{subsubsection}}]{subsubsection}
-%-------------------------页眉页脚--------------
+%-------------------------页眉页脚-------------------------
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{\kaishu \leftmark}
@@ -43,7 +42,7 @@
 \renewcommand{\footrulewidth}{0pt}%去掉横线
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}%标题横线
 \newcommand{\HRulegrossa}{\rule{\linewidth}{1.2mm}}
-%-----------------------伪代码------------------
+%-----------------------伪代码-----------------------
 \usepackage{algorithm}  
 \usepackage{algorithmicx}  
 \usepackage{algpseudocode}  
@@ -71,10 +70,10 @@
   \end{center}
   }
 \makeatother
-%------------------------代码-------------------
-\usepackage{xcolor} 
-\usepackage{listings} 
-\lstset{ 
+%------------------------代码------------------------
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{
 breaklines,%自动换行
 basicstyle=\small,
 escapeinside=``,
@@ -88,9 +87,11 @@ numberstyle=\tiny \color{blue!50},%
 frame=trbl% 
 rulesepcolor= \color{ red!20!green!20!blue!20} 
 }
-%------------超链接----------
+\usepackage{minted}
+\usemintedstyle{xcode}
+%------------超链接------------
 \usepackage[colorlinks,linkcolor=black,anchorcolor=blue]{hyperref}
-%------------------------TODO-------------------
+%------------------------TODO------------------------
 \usepackage{enumitem,amssymb}
 \newlist{todolist}{itemize}{2}
 \setlist[todolist]{label=$\square$}
@@ -100,7 +101,7 @@ rulesepcolor= \color{ red!20!green!20!blue!20}
 \newcommand{\xmark}{\ding{55}}%
 \newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}\hspace{-2.5pt}}
 \newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
-%------------------------水印-------------------
+%------------------------水印------------------------
 \usepackage{tikz}
 \usepackage{xcolor}
 \usepackage{eso-pic}
@@ -114,8 +115,7 @@ rulesepcolor= \color{ red!20!green!20!blue!20}
     {\textcolor{gray!80!cyan!30!magenta!30}{#3}};
 \vfill}}}
 
-%———————————————————————————————————————————正文———————————————————————————————————————————————
-%----------------------------------------------
+%------------------------正文------------------------
 \begin{document}
 \begin{titlepage}
   \begin{center}
@@ -144,9 +144,7 @@ rulesepcolor= \color{ red!20!green!20!blue!20}
   \noindent  %顶格
   \textbf{\\\ 关键字：XX、YY、ZZ}\textbf{} \\\ \\\
 \end{abstract}
-%----------------------------------------------------------------
 \tableofcontents
-%----------------------------------------------------------------
 \newpage
 \watermark{60}{10}{NKU}
 \setcounter{page}{1}
